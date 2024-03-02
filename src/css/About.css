@@ -1,0 +1,124 @@
+.about-head {
+  text-align: center;
+  margin: 9rem 0;
+  padding: 1rem 0;
+}
+.about-head h3 {
+  font: normal bold 34px/1 "Integralcf";
+  font-weight: 10;
+
+  margin-bottom: 45px;
+  letter-spacing: 3px;
+}
+.about-head p {
+  font: normal normal 27px/45px "Sofia Pro";
+  letter-spacing: 0.5px;
+}
+.home-service-card {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e7e7e7;
+  margin: 4rem 2rem;
+  padding: 90px 0;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+.card-one,
+.card-two,
+.card-three,
+.card-four {
+  width: 330px;
+  height: 500px;
+  border: 1px solid #e7e7e7;
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px 20px;
+  cursor: pointer;
+  background-image: linear-gradient(50deg, #1e130c, rgba(17, 15, 15, 0.2));
+}
+
+.app-logo {
+  font-size: 120px;
+  color: #8d6e63;
+  border-radius: 40px;
+  background-color: white;
+  padding: 17px;
+}
+.service-card-title {
+  font: normal normal bold 28px/1 "Sofia Pro";
+  margin-top: 40px;
+}
+.service-card-content {
+  font: normal normal 22px/40px "Sofia Pro";
+  margin-top: 40px;
+}
+.quality-team {
+  width: 100%;
+  height: auto;
+  padding: 5rem 0;
+}
+.quality-team img {
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.quality-team {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 8rem;
+}
+.quality-title {
+  font: normal normal bold 38px/1 "Sofia Pro";
+  letter-spacing: 0.5px;
+}
+.quality-content {
+  font: normal normal normal 25px/45px "Sofia Pro";
+  color: #000;
+  margin-top: 3rem;
+  padding: 5px;
+}
+
+/* Media Querry */
+
+@media only screen and (max-width: 760px) {
+  .card-one,
+  .card-two,
+  .card-three,
+  .card-four {
+    margin-bottom: 1rem;
+    padding: 10px;
+    width: 100%;
+  }
+  .quality-team {
+    flex-wrap: wrap;
+  }
+  .quality-team img {
+    width: 100%;
+  }
+  .about h3 {
+    font: normal normal bold 25px/35px "Poiret-One";
+  }
+  .quality-team {
+    /* margin: 10px; */
+  }
+  .quality-team p {
+    font: normal normal normal 18px/30px "Poiret-One";
+  }
+  .home-service-card {
+    margin-top: 3rem;
+  }
+  .about-head p {
+    font: normal normal 18px/35px "Poiret-One";
+  }
+  .service-card-content {
+    font: normal normal 18px/35px "Poiret-One";
+  }
+  .about-head {
+    margin-top: 2rem;
+  }
+}

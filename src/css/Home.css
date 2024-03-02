@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Integralcf";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/6336ba765cc1618b555967fa_IntegralCF-Heavy.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/633d52298518d22d5748a84f_SofiaPro-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/633d538eeca20e048ba2aa5a_SofiaPro-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/633e7f618f71df593ae37f82_SofiaPro-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+.home {
+  background-image: linear-gradient(0deg, #5928e5, #fff 91%);
+  background: url(../Assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+.home-mid-content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 35px;
+}
+
+.mid-content-left img {
+  object-fit: contain;
+  border-radius: 10px;
+  width: 650px;
+  height: auto;
+}
+.mid-content-right {
+  padding: 100px 30px;
+}
+.mid-content-para {
+  font: normal normal 30px/55px "Sofia Pro";
+  text-align: center;
+  color: black;
+  margin-bottom: 5rem;
+}
+.mid-content-name {
+  font: normal normal 26px/1 "Integralcf";
+  text-align: right;
+  letter-spacing: 2px;
+  color: #5928e5;
+}
+
+.home-profile {
+  padding-bottom: 10rem;
+}
+.home-profile-content {
+  text-align: left;
+  padding: 3rem 5rem;
+  margin-top: 3rem;
+  width: 100%;
+  transition: 0.5s all ease;
+  box-shadow: rgba(0, 0, 50, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-image: linear-gradient(50deg, #1e130c, rgba(17, 15, 15, 0.2));
+  color: white;
+}
+.home-profile-content:hover {
+  background-color: black;
+  opacity: 0.6;
+  transform: scale(1.1);
+  box-shadow: rgba(17, 12, 4, 0.15) 0px 48px 100px 0px;
+}
+.home-profile-title {
+  font: normal normal bold 35px/1 "Sofia Pro";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  text-align: center;
+}
+.home-profile-content p {
+  font: normal normal normal 24px/44px "Sofia Pro";
+  letter-spacing: 1px;
+}
+.home-profile-content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  font: normal normal bold 20px "Poiret-One";
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+/* Media Querry */
+
+@media only screen and (max-width: 760px) {
+  .home-profile h3 {
+    font: normal normal bold 25px/40px "Poiret-One";
+    margin-bottom: 15px;
+  }
+  .home-mid-content {
+    flex-wrap: wrap;
+  }
+  .home-profile p {
+    font: normal normal normal 16px/30px "Poiret-One";
+    text-align: justify;
+    letter-spacing: 0.5px;
+  }
+  .home-profile-content ul {
+    display: flex;
+    justify-content: flex-start;
+    font: normal normal bold 18px/30px "Poiret-One";
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .mid-content-left img {
+    width: 100%;
+  }
+  .mid-content-right p {
+    font: normal normal 20px/40px "Poiret-One";
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .home-profile-content {
+    padding: 15px;
+  }
+}

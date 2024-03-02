@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "Integralcf";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/6336ba765cc1618b555967fa_IntegralCF-Heavy.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/633d52298518d22d5748a84f_SofiaPro-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/633d538eeca20e048ba2aa5a_SofiaPro-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Sofia Pro";
+  src: url("https://assets.website-files.com/5f3a64853eba5d020f364879/633e7f618f71df593ae37f82_SofiaPro-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+.Navbar {
+  height: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to right, #1e130c, #9a8478);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.nav-logo {
+  font: normal normal bold 36px/1 "Sofia Pro";
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 900;
+  margin-left: 20px;
+  color: white;
+}
+.nav-image {
+  width: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.Navbar > .nav-items > a {
+  font: normal normal bold 26px/1 "Sofia pro";
+  font-weight: 700;
+  text-decoration: none;
+  margin: 20px;
+  position: relative;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: white;
+}
+
+.Navbar > .nav-items {
+  margin-right: 30px;
+}
+.Navbar > .nav-items > a:hover {
+  opacity: 1;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+.Navbar > .nav-items > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.45s;
+}
+.Navbar > .nav-items > a:hover::before {
+  width: 100%;
+}
+.Navbar > .nav-toggle {
+  display: none;
+}
+
+/* Media Querry */
+
+@media (max-width: 960px) {
+  .Navbar > .nav-items {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #1e130c, #9a8478);
+    border-radius: 15px;
+    width: 65%;
+    height: 100%;
+    color: white;
+    transform: translateX(-100%);
+    transition: all 0.45s;
+    gap: 2rem;
+    z-index: 1;
+  }
+  .nav-bottom {
+    display: none;
+  }
+  .nav-logo {
+    display: none;
+  }
+  .nav-logo-image {
+    background-color: white;
+    border-radius: 20px;
+  }
+  .Navbar {
+    background-color: black;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  .Navbar > .nav-items > a {
+    color: white;
+    font: normal normal 18px/1 "Poiret-One";
+  }
+  .Navbar > .nav-items.open {
+    transform: translateX(0);
+  }
+  .Navbar > .nav-toggle {
+    display: flex;
+    width: 50;
+    height: 40px;
+    padding-top: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    margin-right: 20px;
+  }
+  .nav-toggle > .bar {
+    position: relative;
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.45s ease-in-out;
+  }
+  .nav-toggle > .bar::before,
+  .nav-toggle > .bar::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.45s ease-in-out;
+  }
+  .nav-toggle > .bar::before {
+    width: 25px;
+    transform: translateY(-8px);
+    right: 0;
+  }
+  .nav-toggle > .bar::after {
+    width: 32px;
+    transform: translateX(8px);
+  }
+  .nav-toggle.open > .bar {
+    transform: translateX(-40px);
+    background: transparent;
+  }
+  .nav-toggle.open > .bar::before {
+    width: 32px;
+    transform: rotate(45deg) translate(26px, -26px);
+  }
+  .nav-toggle.open > .bar::after {
+    transform: rotate(-45deg) translate(26px, 26px);
+  }
+}

@@ -1,0 +1,71 @@
+.process {
+  background: url(../Assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.process-head {
+  text-align: center;
+
+  letter-spacing: 0.5px;
+  padding: 3rem 0;
+}
+.process-head h3 {
+  font: normal bold 30px/1 "Integralcf";
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+}
+.process-head p {
+  font: normal normal 23px/40px "Sofia pro";
+}
+.process-method {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.process-method img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+.process-card {
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: rgba(0, 40, 50, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  background-image: linear-gradient(50deg, #1e130c, rgba(17, 15, 15, 0.2));
+  color: white;
+  border-radius: 15px;
+}
+.process-method h3 {
+  font: normal normal bold 33px/1 "Sofia Pro";
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+}
+.process-method p {
+  font: normal normal 23px/37px "Sofia Pro";
+}
+
+/* Media Querry */
+
+@media only screen and (max-width: 760px) {
+  .process-head h3,
+  .process-method h3 {
+    font: normal normal bold 25px/40px "Poiret-One";
+    text-align: center;
+  }
+  .process-head p,
+  .process-method p {
+    font: normal normal normal 16px/30px "Poiret-One";
+    text-align: justify;
+  }
+  .process-card {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
