@@ -33,21 +33,21 @@
 .Footer {
   display: flex;
   justify-content: space-around;
-  border-top: 2px solid #dbd2f3;
+  border-top: 0.1px solid var(--secondaryColor);
   /* background-color: #6d4c41; */
-  background-image: linear-gradient(to right, #1e130c, #9a8478);
+  /* background-image: linear-gradient(to right, #1e130c, #9a8478); */
 
   padding: 50px 0;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 20rem;
   font-family: "Sofia Pro";
-  color: white;
+  /* color: white; */
 }
 .footer-right-one {
   margin-top: 30px;
 }
 .footer-title {
-  font: normal normal bold 34px/1 "Sofia Pro";
+  font: normal normal bold 20px/1 "Sofia Pro";
   margin-bottom: 38px;
   letter-spacing: 4px;
 }
@@ -55,56 +55,58 @@
   width: 550px;
 }
 .footer-para {
-  font: normal normal normal 25px/1 "Sofia Pro";
+  font: normal normal normal 18px/1 "Sofia Pro";
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
 .footer-paragraph {
-  font: normal normal normal 25px/48px "Sofia Pro";
+  font: normal normal normal 18px/48px "Sofia Pro";
   font-weight: 500;
 }
-.footer-middle li {
+/* .footer-middle li {
   list-style: none;
 }
 .footer-middle li a {
   list-style: none;
-  font: normal normal normal 25px/1 "Sofia Pro";
+  font: normal normal normal 18px/1 "Sofia Pro";
   text-decoration: none;
   margin-bottom: 10px;
   cursor: pointer;
   line-height: 40px;
   font-weight: 500;
-  color: white;
+  color: black;
 }
 .footer-middle li a:hover {
-  color: white;
-}
+  color: var(--secondaryColor);
+} */
 .footer-right img {
   width: 35px;
   margin-right: 10px;
 }
 .footer-bottom {
   /* background-color: #6d4c41; */
-  background-image: linear-gradient(to right, #1e130c, #9a8478);
+  /* background-image: linear-gradient(to right, #1e130c, #9a8478); */
 
   padding: 1rem 0;
 }
 .horizontal-line {
-  color: white;
+  /* color: black; */
+  margin: 0 20rem;
+  background-color: var(--secondaryColor);
 }
 .social-icons {
-  color: white;
-  font-size: 55px;
+  /* color: white; */
+  font-size: 40px;
   padding: 10px;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 50px;
   margin-right: 10px;
   transition: 0.4s all ease-in-out;
 }
 .social-icons:hover {
   transform: scale(1.1);
-  color: white;
-  border: 2px solid white;
+  /* color: white; */
+  border: 2px solid black;
 }
 .social-links {
   display: flex;
@@ -113,19 +115,19 @@
   justify-content: center;
 }
 .copyright {
-  font: normal normal 21px/1 "Sofia Pro";
+  font: normal normal 18px/1 "Sofia Pro";
   letter-spacing: 1px;
   text-align: center;
-  color: white;
+  color: black;
 }
 .copyright a {
   cursor: pointer;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: 0.5s all ease;
 }
 .copyright a:hover {
-  color: greenyellow;
+  color: var(--secondaryColor);
 }
 
 /*  Media Querry */
