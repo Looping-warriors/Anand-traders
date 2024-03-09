@@ -6,15 +6,12 @@
 .contact {
   display: flex;
   justify-content: center;
-  gap: 8rem;
+  gap: 3rem;
   padding-bottom: 4rem;
+  margin-top: 5rem;
   align-items: center;
   flex-wrap: wrap;
-  height: 90vh;
-  background: url(../Assets/background.jpg);
-  background-repeat: no-repeat;
-  background-size: 2300px;
-  background-position: center;
+  /* height: 90vh; */
 }
 .contact-left-flex {
   margin-top: 5rem;
@@ -22,7 +19,7 @@
   padding-bottom: 50px;
   box-shadow: rgba(14, 90, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  background-color: #e7e7e7;
+  background-color: var(--secondaryColor);
   border-radius: 14px;
 }
 .contact-left-flex h3 {
@@ -44,7 +41,16 @@
   border: none;
   outline: none;
   width: 400px;
+  border-radius: 20px;
 }
+.input-div textarea {
+  padding: 16px 30px;
+  border: none;
+  outline: none;
+  width: 400px;
+  border-radius: 20px;
+}
+
 .enquiry-desc {
   height: 120px;
 }
@@ -58,6 +64,7 @@
 }
 .submit-btn button {
   border: none;
+  border-radius: 20px;
   outline: none;
   padding: 15px 55px;
   background-color: black;
@@ -69,30 +76,34 @@
   display: flex;
   align-items: center;
   margin-top: 5rem;
-  background-color: #e7e7e7;
+  background-color: #dddedf;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   border-radius: 15px;
-  padding: 140px 100px;
+  padding: 100px 100px;
 }
 
 .contact-right-flex h3 {
   font: normal normal bold 30px "Integralcf";
   letter-spacing: 3px;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   text-align: center;
   margin-top: -5rem;
 }
 .contact-right-flex h4 {
   font: normal normal bold 30px/1 "Sofia Pro";
-  margin-bottom: 31px;
+  margin-bottom: 21px;
 }
 .contact-right-flex p {
   font: normal normal 22px/1 "Sofia Pro";
   letter-spacing: 2px;
 }
 .contact-section {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-right-flex-content {
+  margin: 20px 0;
 }
 
 @media only screen and (max-width: 760px) {
