@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 export default function MediaCover() {
   const [open, setOpen] = React.useState(false);
   const productApron = [product1, product2, product3, product2, product5];
+  let duration = 0.5;
   const products = [
     { img: product1, title: "Apron", product: productApron },
     { img: product2, title: "Apron", product: productApron },
@@ -34,15 +35,23 @@ export default function MediaCover() {
         <Masonry gutter='1rem'>
           {products.map((data, index) => {
             return (
-              <>
+              <motion.div
+                key={index}
+                initial={{ position: "relative", top: 200, opacity: 0 }}
+                whileInView={{
+                  position: "relative",
+                  top: 0,
+                  opacity: 1,
+                  transition: { duration: (duration += 0.5), ease: "linear" },
+                }}
+                viewport={{ once: true }}
+              >
                 {/* <motion.div
-                  
                   initial={{ position: "relative", top: 200, opacity: 0 }}
                   whileInView={{ position: "relative", top: 0, opacity: 1 }}
                 > */}
                 <Card
                   component='li'
-                  key={index}
                   sx={{
                     flexGrow: 1,
                     "&:hover": {
@@ -152,7 +161,7 @@ export default function MediaCover() {
                     </Modal>
                   )}
                 </Transition>
-              </>
+              </motion.div>
             );
           })}
         </Masonry>
