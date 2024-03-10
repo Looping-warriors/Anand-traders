@@ -15,7 +15,7 @@
 }
 .contact-left-flex {
   margin-top: 5rem;
-  padding: 5px 120px;
+  padding: 5px 100px;
   padding-bottom: 50px;
   box-shadow: rgba(14, 90, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -80,7 +80,7 @@
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   border-radius: 15px;
-  padding: 100px 100px;
+  padding: 100px 80px;
 }
 
 .contact-right-flex h3 {
