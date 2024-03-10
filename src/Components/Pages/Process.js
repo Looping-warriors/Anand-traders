@@ -9,6 +9,7 @@ import image6 from "../../Assets/process/7.jpeg";
 import image7 from "../../Assets/process/8.jpeg";
 import image8 from "../../Assets/process/9.jpeg";
 import image9 from "../../Assets/process/10.jpeg";
+import { motion } from "framer-motion";
 
 function Process() {
   window.scrollTo(0, 0);
@@ -72,7 +73,16 @@ function Process() {
   return (
     <div className='process'>
       <div className='process-head'>
-        <div className='container'>
+        <div
+          className='container'
+          initial={{ position: "relative", top: 200, opacity: 0 }}
+          whileInView={{
+            position: "relative",
+            top: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+        >
           <h3>Process</h3>
           <p>
             We have team of workforce who are closely monitoring with high AQL
@@ -84,21 +94,36 @@ function Process() {
           </p>
         </div>
       </div>
-      <div className='container'>
+      <div className='container process-container'>
         <div className='process-method'>
           {data.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className='process-card'
+              style={{
+                backgroundImage: `  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${item.icon})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                overflow: "hidden",
+              }}
+              initial={{ position: "relative", top: 200, opacity: 0 }}
+              whileInView={{
+                position: "relative",
+                top: 0,
+                opacity: 1,
+                transition: { duration: 0.5, ease: "linear" },
+              }}
+              viewport={{ once: true }}
             >
-              <div>
+              {/* <div>
                 <img src={item.icon}></img>
-              </div>
+              </div> */}
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

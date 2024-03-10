@@ -1,16 +1,13 @@
 .process {
-  background: url(../Assets/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  margin-top: 10vh;
 }
 .process-head {
   text-align: center;
-
   letter-spacing: 0.5px;
   padding: 3rem 0;
 }
 .process-head h3 {
+  color: var(--secondaryColor);
   font: normal bold 30px/1 "Integralcf";
   margin-bottom: 40px;
   letter-spacing: 4px;
@@ -18,28 +15,42 @@
 .process-head p {
   font: normal normal 23px/40px "Sofia pro";
 }
-.process-method {
+/* .process-method {
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
-}
-.process-method img {
+} */
+/* .process-method img {
   width: 200px;
   height: 200px;
   border-radius: 15px;
+} */
+
+.process-container {
+  margin: 0;
+  padding: 0;
 }
 .process-card {
+  width: 100vw;
+  height: 80vh;
   padding: 15px;
+  margin-bottom: 1rem;
+  position: relative;
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  box-shadow: rgba(0, 40, 50, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  background-image: linear-gradient(50deg, #1e130c, rgba(17, 15, 15, 0.2));
+  /* border-radius: 15px; */
+}
+.process-card > div {
+  width: 50rem;
+  /* text-align: center; */
   color: white;
-  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
 }
 .process-method h3 {
   font: normal normal bold 33px/1 "Sofia Pro";
