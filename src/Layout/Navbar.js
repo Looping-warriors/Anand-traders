@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../Assets/anand-logo.jpg";
 import "../css/Navbar.css";
 
@@ -30,15 +30,15 @@ const Navbar = () => {
             src={logo}
           ></img>
           <span className='nav-logo'>
-            <span >Anand</span> Traders
+            <span>Anand</span> Traders
           </span>
         </div>
         <div className={`nav-items ${isOpen && "open"}`}>
-          <Link to='/home'>Home</Link>
-          <Link to='/about'>About Us</Link>
-          <Link to='/process'>Process</Link>
-          <Link to='/products'>Products</Link>
-          <Link to='/contact'>Contact Us</Link>
+          <NavLink to='/home'>Home</NavLink>
+          <NavLink to='/about'>About Us</NavLink>
+          <NavLink to='/process'>Process</NavLink>
+          <NavLink to='/products'>Products</NavLink>
+          <NavLink to='/contact'>Contact Us</NavLink>
         </div>
         <div
           className={`nav-toggle ${isOpen && "open"}`}
