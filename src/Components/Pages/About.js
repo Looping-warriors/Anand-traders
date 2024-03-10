@@ -31,7 +31,7 @@ function About() {
       duration: "",
     },
     {
-      title: "Product Quality",
+      title: "Product Quality Analysis",
       content:
         "All our organized and sustained efforts are driven towards providing the customers.",
       duration: "",
@@ -44,6 +44,7 @@ function About() {
         <motion.div
           initial={{ position: "relative", top: 200, opacity: 0 }}
           whileInView={{ position: "relative", top: 0, opacity: 1 }}
+          viewport={{ once: true }}
           className='container'
         >
           <h3>Why Choose Us</h3>
@@ -66,6 +67,7 @@ function About() {
                 opacity: 1,
                 transition: { duration: index, ease: "linear" },
               }}
+              viewport={{ once: true }}
               class='service-card'
             >
               <div class='service-content'>
@@ -118,8 +120,8 @@ function About() {
           <h3 className='quality-title'>Q A & Supervisors Team</h3>
           <p className='quality-content'>
             Each and every piece of the products has come across several stages
-            under the vigilant <br /> supervisions of our Q.A. Team. Hopefully
-            the same can be noticed on the pictures
+            under the vigilant, supervisions of our Q.A. Team. Hopefully the
+            same can be noticed on the pictures
           </p>
         </div>
       </div>

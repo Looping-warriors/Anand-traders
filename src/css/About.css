@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   width: 320px;
-  height: 400px;
+  /* height: 400px; */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   padding: 32px;
   overflow: hidden;
@@ -56,10 +56,12 @@
 .service-content .heading {
   font-weight: 700;
   font-size: 32px;
+  height: 90px;
 }
 
 .service-content .para {
   line-height: 1.5;
+  height: 90px;
 }
 
 .service-content .btn {
@@ -68,6 +70,7 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
+  color: white;
   background: rgb(9, 0, 158);
   background: linear-gradient(
     56deg,
@@ -87,12 +90,7 @@
   width: 5px;
   height: 100%;
   background: rgb(9, 0, 158);
-  background: linear-gradient(
-    56deg,
-    rgba(9, 0, 158, 1) 5%,
-    rgba(54, 54, 218, 1) 19%,
-    rgba(0, 212, 255, 1) 64%
-  );
+  background: var(--gradientColor);
   z-index: -1;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -103,6 +101,7 @@
 
 .service-card:hover {
   box-shadow: none;
+  color: white;
 }
 
 .service-card:hover .btn {
@@ -150,10 +149,13 @@
   font: normal normal 22px/40px "Sofia Pro";
   margin-top: 40px;
 }
+
+/* Quality team*/
+
 .quality-team {
   width: 100%;
   height: auto;
-  padding: 5rem 0;
+  padding: 5rem 4rem;
 }
 .quality-team img {
   width: 500px;
@@ -284,7 +286,8 @@
 }
 
 .button:hover {
-  background-color: #44cdff;
+  background: white;
+  color: var(--gradientColor);
   transform: scale(1.1);
 }
 
