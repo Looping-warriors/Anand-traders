@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import slide1 from "../../Assets/main.jpg";
 import structure from "../../Assets/company.jpeg";
 import "../../css/Home.css";
+import UIkit from "uikit";
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 function Home() {
   window.scrollTo(0, 0);
@@ -24,79 +26,99 @@ function Home() {
   return (
     <div className='home'>
       <motion.div
-        className='slide-image'
+        className='uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex slide-image'
         initial='out'
         animate='in'
         exit='out'
         variants={pageDurationTwo}
         transition={pageTransitionTwo}
       >
-        <img src={slide1} />
+        {/* <img src={slide1} /> */}
+        <div
+          className='uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical slider-image-content'
+          uk-parallax='start: 100%; end: 100%; sepia: 100;'
+        >
+          <h1 uk-parallax='opacity: ,1,1; y: -100,0,0; x: 100,100,0; scale: 5,3,1; end: 30vh'>
+            <span>ANAND</span> TRADERS
+          </h1>
+          <p uk-parallax='start: 30vh; opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,2,1; end: 30vh'>
+            Our Products are 100% Cotton home furnishing textiles madeups.
+          </p>
+        </div>
+        <div className='scroll-down-btn'>
+          <span>Scroll Down</span>
+          <FaAngleDoubleDown size={50} />
+        </div>
       </motion.div>
       {/* <Button>hello</Button> */}
       <div className='home-mid-content'>
-        <div className='mid-content-left'>
+        <div
+          className='mid-content-left'
+          uk-sticky='end: #end-sticky ;uk-height-large; offset: 100'
+        >
           <img src={structure} />
         </div>
+
         <div className='mid-content-right'>
-          {/* <Blockquote
-            color='blue'
-            cite=''
-            mt='xl'
-          > */}
-          <p className='mid-content-para'>
-            “Quality is never an accident; it is always the result of high
-            intention, sincere effort, intelligent direction <br /> and skillful
-            execution; it represents the wise choice of many alternatives.”
-          </p>
-          <h3 className='mid-content-name'>William A. Foster</h3>
-          {/* </Blockquote> */}
+          <div
+            className='home-profile'
+            id='end-sticky'
+          >
+            <div className='container'>
+              <motion.div
+                className='home-profile-content'
+                initial={{ position: "relative", top: 200, opacity: 0 }}
+                whileInView={{
+                  position: "relative",
+                  top: 0,
+                  opacity: 1,
+                }}
+                viewport={{ once: true }}
+              >
+                <h3 className='home-profile-title'>Welcome to Anand Traders</h3>
+                <p>
+                  Established in 1989 by R. Kasthuri, Anand Traders specializes
+                  in crafting top-quality 100% cotton home furnishing textiles
+                  in Karur, a leading hub in South India. Committed to timely
+                  delivery, our products from Selvan Traders reflect a
+                  dedication to quality craftsmanship with direct control over
+                  manufacturing processes.
+                </p>
+              </motion.div>
+              <motion.div
+                className='home-profile-content'
+                initial={{ position: "relative", top: 200, opacity: 0 }}
+                whileInView={{
+                  position: "relative",
+                  top: 0,
+                  opacity: 1,
+                }}
+                viewport={{ once: true }}
+              >
+                <h3 className='home-profile-title'>
+                Our Distinctive Achievements
+                </h3>
+                <p>
+                  Explore our diverse collection of table linens and kitchen
+                  textiles, featuring classic, traditional, and contemporary
+                  designs for every occasion. We prioritize design, innovation,
+                  prompt delivery, and affordability. Committed to excellent
+                  customer service, we work closely with you, providing valuable
+                  insights and assistance whenever needed.
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className='home-profile'>
-        <div className='container'>
-          <div className='home-profile-content'>
-            <h3 className='home-profile-title'>Welcome to Anand Traders</h3>
-            <p>
-              Anand Traders Located at Karur is one of the major Textiles
-              manufacturing and exporter especially home furnishing textiles in
-              South India. Our primary focus remains timely delivery to our
-              clients at all times. A products from Selvan traders comes with
-              the promise of quality workmenship. We have direct control over
-              the processes.
-            </p>
-          </div>
-          <div className='home-profile-content'>
-            <h3 className='home-profile-title'>COMPANY'S PROFILE</h3>
-            <p>
-              Anand Traders is Established in 1989 by R.Kasthuri our Beloved
-              Owner. Our Products are 100% Cotton home furnishing textiles
-              madeups.
-            </p>
-          </div>
-          <div className='home-profile-content'>
-            <h3 className='home-profile-title'>HIGHLIGHTS OF OUR COMPANY</h3>
-            <p>
-              We are proud to offer a fantastic and varieties of table linen and
-              kitchen textiles. We offer products suitable for all occasions and
-              provide an extensive choice of classic, traditional and
-              contemporary designs. We place great importance on design and
-              innovation, prompt delivery, Quality products at prices suitable
-              for all retailers and above all good customer service. We work
-              closely with our customers and we are always available to share
-              our experience whenever help and advice is needed.
-            </p>
-          </div>
-          <div className='home-profile-content'>
-            <h3 className='home-profile-title'>Certificates</h3>
-            <ul>
-              <li>SA 8000</li>
-              <li>Social Audit for Ross</li>
-              <li>SOCIAL AUDIT FOR TJX</li>
-              <li>GOTS CERTIFICATE</li>
-            </ul>
-          </div>
-        </div>
+      <div className='home-profile-content'>
+        <h3 className='home-profile-title'>Certificates</h3>
+        <ul>
+          <li>SA 8000</li>
+          <li>Social Audit for Ross</li>
+          <li>SOCIAL AUDIT FOR TJX</li>
+          <li>GOTS CERTIFICATE</li>
+        </ul>
       </div>
     </div>
   );

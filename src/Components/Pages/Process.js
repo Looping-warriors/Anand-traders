@@ -73,7 +73,7 @@ function Process() {
   return (
     <div className='process'>
       <div className='process-head'>
-        <div
+        <motion.div
           className='container'
           initial={{ position: "relative", top: 200, opacity: 0 }}
           whileInView={{
@@ -92,7 +92,7 @@ function Process() {
             disciplined team of professional experts who are helping us to
             supply outstanding products with proper time management.
           </p>
-        </div>
+        </motion.div>
       </div>
       <div className='container process-container'>
         <div className='process-method'>
@@ -101,7 +101,7 @@ function Process() {
               key={index}
               className='process-card'
               style={{
-                backgroundImage: `  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${item.icon})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${item.icon})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
